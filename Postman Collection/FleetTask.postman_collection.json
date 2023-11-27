@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "d5592101-2a05-43cf-a640-172fa1bc2953",
+		"name": "FleetTask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15353262",
+		"_collection_link": "https://orange-shuttle-125584.postman.co/workspace/New-Team-Workspace~f74efca8-ab36-4820-832b-9c45e9c0c9da/collection/15353262-d5592101-2a05-43cf-a640-172fa1bc2953?action=share&source=collection_link&creator=15353262"
+	},
+	"item": [
+		{
+			"name": "Authentcation",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "user@example.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/Auth/login",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"Auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Folder",
+			"item": [
+				{
+					"name": "available-seat",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZmI0NGI4ZmJlNTNmYTE4N2JkYTY3NDFhNTEyY2I1Mjc0NDg0NzhkNWJhOGExYjZjMmE1ZTNiMDRjZjNkZjI2Njc1YTU5M2NkZTBkZTZmNzAiLCJpYXQiOjE3MDExMTEyODUuMDQ0NzM2LCJuYmYiOjE3MDExMTEyODUuMDQ0NzQsImV4cCI6MTczMjczMzY4NC45MTI5NjcsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.TtMuttUD_tlZBJTukxPRSS1ZIfwYoo0g-L3xi2jsN4shivgB4S1gdPT4nqA2hcqRS0eMPVcajL-TmT98WL8EJTTSIQ3M5DO-VB_A5nZYE27AzmXWbQ_mgDtk5NnuMhygJct7UM9-zWQLiGJsQ3nZuFn4X3V2Jsl1c762BF8bMW33GtHVVhNhuW0cEKZO3GD1g2BPU80vy2GGATNWAbVsmyOW7P_zkGDqhsSGnFRW_q5g0wXgnORS3XDNlGjxFPP0FJugm6KiDKQtevSy7Nyfu_xBIbdIhWpGqxQqFBgOh0VV8h9XMhZOJEH6bn38Oy-FGIpWTpTDS-OpFFzxMH3_Zzjt8t4LE1fTHrmOEZmz3Xyf8ZQy4nlVfLNHv1N-sR12Oe5RKHJ6_10w844TeU4dSeJPeGSlrtqvd6lvEKg3JwM198xzTLJy9SlZzMAiwPJmVHoE742aqYjJmiLf9R41gdh21cppl41Ir_te1xZs0IGc7OZl95b6E-HGhYQw9EhNHcj62Yxkyb0-5jC0LzbIj612V9dOJuxpQenFIyC0scPv4bsJyNjQaLNBHRnyTAevya32QtxxEuazsik9Xjj_slRoJy3hbJB7mRdaj_rjBLxmnXjTRanJNYSCFtsIWUsWsaY5BfbU17RFbIp2vVNZ4TDEUqGhu8QoHTIi4QBsPQo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseUrl}}/bookings/available-seats/Cairo/Asyut",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"bookings",
+								"available-seats",
+								"Cairo",
+								"Asyut"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "book-seat",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZmI0NGI4ZmJlNTNmYTE4N2JkYTY3NDFhNTEyY2I1Mjc0NDg0NzhkNWJhOGExYjZjMmE1ZTNiMDRjZjNkZjI2Njc1YTU5M2NkZTBkZTZmNzAiLCJpYXQiOjE3MDExMTEyODUuMDQ0NzM2LCJuYmYiOjE3MDExMTEyODUuMDQ0NzQsImV4cCI6MTczMjczMzY4NC45MTI5NjcsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.TtMuttUD_tlZBJTukxPRSS1ZIfwYoo0g-L3xi2jsN4shivgB4S1gdPT4nqA2hcqRS0eMPVcajL-TmT98WL8EJTTSIQ3M5DO-VB_A5nZYE27AzmXWbQ_mgDtk5NnuMhygJct7UM9-zWQLiGJsQ3nZuFn4X3V2Jsl1c762BF8bMW33GtHVVhNhuW0cEKZO3GD1g2BPU80vy2GGATNWAbVsmyOW7P_zkGDqhsSGnFRW_q5g0wXgnORS3XDNlGjxFPP0FJugm6KiDKQtevSy7Nyfu_xBIbdIhWpGqxQqFBgOh0VV8h9XMhZOJEH6bn38Oy-FGIpWTpTDS-OpFFzxMH3_Zzjt8t4LE1fTHrmOEZmz3Xyf8ZQy4nlVfLNHv1N-sR12Oe5RKHJ6_10w844TeU4dSeJPeGSlrtqvd6lvEKg3JwM198xzTLJy9SlZzMAiwPJmVHoE742aqYjJmiLf9R41gdh21cppl41Ir_te1xZs0IGc7OZl95b6E-HGhYQw9EhNHcj62Yxkyb0-5jC0LzbIj612V9dOJuxpQenFIyC0scPv4bsJyNjQaLNBHRnyTAevya32QtxxEuazsik9Xjj_slRoJy3hbJB7mRdaj_rjBLxmnXjTRanJNYSCFtsIWUsWsaY5BfbU17RFbIp2vVNZ4TDEUqGhu8QoHTIi4QBsPQo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseUrl}}/bookings/book-seat/Cairo/Asyut",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"bookings",
+								"book-seat",
+								"Cairo",
+								"Asyut"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseUrl",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string"
+		}
+	]
+}
